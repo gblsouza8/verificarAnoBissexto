@@ -11,9 +11,12 @@ def verificarAno(ano):
         print(ano,"não é um ano bissexto")
 
 
+def programa():
+    try: 
+        ano = int(input("Digite o ano: "))
+        verificarAno(ano)
+    except ValueError:
+        print("Ano inválido.")
+        programa()
 
-try: 
-    ano = int(input("Digite o ano: "))
-    verificarAno(ano)
-except ValueError:
-    print("Ano inválido.")
+programa()
