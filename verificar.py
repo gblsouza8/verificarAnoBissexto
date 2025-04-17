@@ -10,5 +10,10 @@ def verificarAno(ano):
     else:
         print(ano,"não é um ano bissexto")
 
-ano = int(input("Digite o ano: "))
-verificarAno(ano)
+
+
+try: 
+    ano = int(input("Digite o ano: "))
+    verificarAno(ano)
+except ValueError:
+    print("Ano inválido.")
